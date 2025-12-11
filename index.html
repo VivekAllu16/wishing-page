@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Anusha 💛✨</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Cookie&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL ------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+/* ---------------------------------------------
+   PAGE–1  (Smooth Gradient + Hearts + Particles)
+----------------------------------------------*/
+#home {
+    z-index: 10;
+    background: linear-gradient(135deg, #ffb6c9, #ffc9df, #ffd6e8, #ffcde1);
+    background-size: 300% 300%;
+    animation: bgFlow 10s ease-in-out infinite;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Smooth gradient transition */
+@keyframes bgFlow {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Title like reference */
+.open-title {
+    font-family: "Cookie", cursive;
+    font-size: 4rem;
+    margin-top: 120px;
+    color: #b2364b;
+    text-shadow: 0px 5px 15px rgba(255, 90, 120, 0.35);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Subtitle */
+.sub {
+    margin-top: -10px;
+    font-size: 1.3rem;
+    color: #7a3345;
+    animation: fadeIn 2.2s ease-out;
+}
+
+/* Button */
+.tap-btn {
+    margin-top: 35px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #ff758f, #ff9eb3);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    letter-spacing: .5px;
+    box-shadow: 0px 6px 20px rgba(255, 70, 120, 0.35);
+    animation: fadeIn 2.5s ease-out, pulse 2s infinite;
+}
+
+/* Button pulse */
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+/* Floating particles */
+.particle {
+    position: absolute;
+    background: rgba(255,255,255,0.65);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: drift 8s infinite ease-in-out;
+}
+
+@keyframes drift {
+    0% {transform: translateY(0) translateX(0); opacity: .4;}
+    50% {transform: translateY(-25px) translateX(15px); opacity: .9;}
+    100% {transform: translateY(0) translateX(0); opacity: .4;}
+}
+
+/* Falling hearts */
+.heart {
+    position: absolute;
+    animation: fall 7s linear infinite;
+    font-size: 18px;
+    opacity: .9;
+}
+
+@keyframes fall {
+    0% {transform: translateY(-10vh) rotate(0deg);}
+    100% {transform: translateY(110vh) rotate(360deg);}
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0; transform: scale(1.05);}
+}
+
+
+/* ---------------------------------------------
+   PAGE–2 (Message)
+----------------------------------------------*/
+#messagePage {
+    opacity: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at top right, #ffd1e8, #ffecf5, #ffe6f2);
+    overflow-y: auto;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -10vh;
+    background: rgba(255, 140, 170, 0.35);
+    border-radius: 50%;
+    animation: floatUp 9s infinite linear;
+}
+
+@keyframes floatUp {
+    0% {transform: translateY(0) scale(1); opacity: .4;}
+    100% {transform: translateY(-110vh) scale(1.6); opacity: 0;}
+}
+
+
+.card {
+    margin: 70px auto;
+    max-width: 780px;
+    background: rgba(255,255,255,0.8);
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 35px rgba(255, 140, 160, 0.4);
+    backdrop-filter: blur(10px);
+    animation: floatSoft 4s infinite ease-in-out, fadeIn 1.8s ease;
+    border-left: 6px solid #ff7aa8;
+    border-right: 6px solid #ff7aa8;
+}
+
+@keyframes floatSoft {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
+}
+
+.message {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #5a3459;
+    font-weight: 600;
+}
+
+.signature {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #d64f89;
+    font-weight: bold;
+    text-align: right;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- PAGE 1 --------------------------------------------------------- -->
+<div id="home" class="page">
+
+    <h1 class="open-title">Happy Birthday, Anusha! 💕</h1>
+    <div class="sub"></div>
+
+    <button class="tap-btn" onclick="revealMessage()">For Best Wishes →</button>
+
+</div>
+
+
+
+<!-- PAGE 2 --------------------------------------------------------- -->
+<div id="messagePage" class="page">
+
+    <script>
+        setInterval(()=>{
+            let b = document.createElement("div");
+            b.className = "bubble";
+            let size = 15 + Math.random()*35;
+            b.style.width = b.style.height = size+"px";
+            b.style.left = Math.random()*100+"vw";
+            b.style.animationDuration = (6 + Math.random()*6)+"s";
+            document.getElementById("messagePage").appendChild(b);
+            setTimeout(()=>b.remove(), 12000);
+        }, 500);
+    </script>
+
+        <div class="card">
+        <div class="message">
+            <p>💛 You’re not just pretty —  
+            you’re the kind of beautiful that makes people pause without even realizing it.  
+            The kind of beautiful that stays in someone’s mind long after the moment is gone. ✨</p>
+
+            <p>😄 I adore your laugh, your softness,  
+            the spark in your eyes when you talk,  
+            and the way you blush when I tease you…  
+            trust me, that’s one of the cutest things I’ve ever seen.</p>
+
+            <p>You make normal moments feel special.  
+            You make days feel lighter.  
+            And without even trying,  
+            you’ve become someone I genuinely treasure. 💗</p>
+
+            <p>May your smile stay as cute as ever,  
+            may your dreams come closer than ever,  
+            and may today make you blush at least a little —  
+            just like you make me blush without even trying. 😄✨</p>
+
+            <p>I hope today brings you the happiness you deserve —  
+            soft, warm, and gentle. 🌸  
+            And I hope this coming year brings you every dream  
+            you whisper only to yourself.</p>
+
+            <p>And maybe… just maybe…  
+            a little more of *me*,  
+            teasing you just enough  
+            to make you blush again. 😉💛✨</p>
+        </div>
+
+        <div class="signature">
+            — With Best Wishes,<br>
+            From your closest friend💗
+        </div>
+    </div>
+</div>
+
+
+
+<!-- EFFECTS + PAGE SWITCH --------------------------------------- -->
+<script>
+
+/* Floating particles */
+for(let i=0; i<25; i++){
+    let p = document.createElement("div");
+    p.className = "particle";
+    let size = 6 + Math.random()*8;
+    p.style.width = p.style.height = size+"px";
+    p.style.left = Math.random()*100 + "vw";
+    p.style.top = Math.random()*100 + "vh";
+    p.style.animationDuration = (6 + Math.random()*5) + "s";
+    document.getElementById("home").appendChild(p);
+}
+
+/* Falling hearts */
+const heartShapes = ["❤️","💕","💗","💞","❣️"];
+
+for(let i=0; i<20; i++){
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = heartShapes[Math.floor(Math.random()*heartShapes.length)];
+    h.style.left = Math.random()*100 + "vw";
+    h.style.animationDuration = (5 + Math.random()*5) + "s";
+    document.getElementById("home").appendChild(h);
+}
+
+/* Switch page */
+function revealMessage(){
+    const home = document.getElementById("home");
+    const msg = document.getElementById("messagePage");
+
+    home.style.animation = "fadeOut 1s forwards";
+
+    setTimeout(()=>{
+        home.style.display = "none";
+        msg.style.opacity = "1";
+        msg.style.pointerEvents = "auto";
+        msg.style.animation = "fadeIn 1.5s ease";
+    }, 900);
+}
+
+</script>
+
+</body>
+</html>
