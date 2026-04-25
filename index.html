@@ -192,31 +192,56 @@
             transform-origin: top center;
         }
 
-        .unicorn-hang { right: calc(100% + 5px); top: -30px; bottom: 50%; }
-        .girl-hang { left: calc(100% + 5px); top: -30px; bottom: -15px; }
-        .star-left-hang { left: 35%; top: -90px; }
-        .star-right-hang { right: 35%; top: -90px; }
+        .unicorn-hang {
+            right: calc(100% + 5px);
+            top: -30px;
+            bottom: 50%;
+        }
+
+        .girl-hang {
+            left: calc(100% + 5px);
+            top: -30px;
+            bottom: -15px;
+        }
+
+        .star-left-hang {
+            left: 35%;
+            top: -90px;
+        }
+
+        .star-right-hang {
+            right: 35%;
+            top: -90px;
+        }
 
         .unicorn-img {
             width: 90px;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
             margin-top: -5px;
         }
 
         .girl-img {
             width: 110px;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
             margin-top: -5px;
         }
 
         .string {
             width: 2px;
             background: linear-gradient(to bottom, #b8860b, #ffd700);
-            box-shadow: 0 0 5px rgba(255,215,0,0.5);
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
 
-        .unicorn-hang .string, .girl-hang .string { flex-grow: 1; height: auto; }
-        .star-left-hang .string, .star-right-hang .string { height: 60px; }
+        .unicorn-hang .string,
+        .girl-hang .string {
+            flex-grow: 1;
+            height: auto;
+        }
+
+        .star-left-hang .string,
+        .star-right-hang .string {
+            height: 60px;
+        }
 
         .star {
             font-size: 3rem;
@@ -226,8 +251,13 @@
         }
 
         @keyframes swing {
-            0% { transform: rotate(-6deg); }
-            100% { transform: rotate(6deg); }
+            0% {
+                transform: rotate(-6deg);
+            }
+
+            100% {
+                transform: rotate(6deg);
+            }
         }
 
         .card {
@@ -249,9 +279,17 @@
         }
 
         @keyframes floatSoft {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
 
         .message {
@@ -270,7 +308,7 @@
             color: #ff9cbd;
             margin-top: 0;
             margin-bottom: 25px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .message p {
@@ -286,13 +324,34 @@
         }
 
         @media (max-width: 800px) {
-            .card-container { width: 70%; max-width: 320px; }
-            .card { padding: 25px 20px; }
-            .unicorn-img { width: 60px; }
-            .girl-img { width: 75px; }
-            .star { font-size: 2rem; }
-            .star-left-hang { left: 20%; }
-            .star-right-hang { right: 20%; }
+            .card-container {
+                width: 70%;
+                max-width: 320px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .unicorn-img {
+                width: 60px;
+            }
+
+            .girl-img {
+                width: 75px;
+            }
+
+            .star {
+                font-size: 2rem;
+            }
+
+            .star-left-hang {
+                left: 20%;
+            }
+
+            .star-right-hang {
+                right: 20%;
+            }
         }
     </style>
 </head>
@@ -321,7 +380,7 @@
                 <div class="string"></div>
                 <img src="unicon.png" class="unicorn-img" alt="Unicorn" />
             </div>
-            
+
             <!-- Right Girl (Hanging) -->
             <div class="hanging-item girl-hang">
                 <div class="string"></div>
@@ -342,15 +401,20 @@
             <div class="card">
                 <div class="message">
                     <h2>Happy Birthday Neha 💗</h2>
-                    <p>Nuvvu chala simple ga untav, kani nee presence tho situation koncham better aipothundi 😉</p>
-                    <p>Fun moments lo nee vibe separate ga untundi, and that's something I like about you 🤩✨</p>
-                    <p>Mana madhya unna friendship casual ga start ayina, ippudu chala comfortable ga undi 🌸<br>
-                    Random ga matladina, navvina, time spend chesina — anni easy ga feel avuthayi 💕</p>
-                    <p>Nuvvu eppudu ilane happy ga undali, koncham less tension, koncham ekkuva smiles tho 😌✨<br>
-                    Nee plans anni slow ga aina work avvali, and nuvvu anukunnavi achieve cheyyali 💫</p>
-                    <p>I hope ee birthday neeku peaceful ga, happy ga, and koncham special ga undali 🎂✨</p>
-                    <p>Take care and enjoy your day 😄💛</p>
-                    
+                    <p>Ninnu first time chusinappudu attitude girl anukunna 😂, kani neetho travel chesina tarwathey ardam ayyindhi tingari danivi ani 🫩<br>
+                    Extrovert ka baap 🫡 neeku vunna friends list ki oka school pettachu 🤣</p>
+                    <p>Indirect ga mana friendship start ayna mana iddari madya chala funny moments jarigay🫂 neetho vunna parthi sari nuvvu nenu meena ni roast chestu stomach ache vachela navvevalam 😆</p>
+                    <p>Normal situation nee kuda funny ga marchali antey nee tarwathey evarina 🙂↔️</p>
+                    <p>Kalisi reels chesam, dance lu vesam, tirigam, tinnam, chala lifetime memories create cheskunnanu neetho 💗🫶</p>
+                    <p>Exam rayadaniki nuvvu, meena vellina prathi sari nannu eduru ramannadam made me feel special ✨😍</p>
+                    <p>Neetho exhibition ki vellina prathi sari roju antha cheppukunela navvukunnam.💗<br>
+                    Normal ga start ayina friendship chala memorable ga ayyindhi so happy to have a person like you in my life ❤️</p>
+                    <p>Neeku birthdays🎈 antey chala istam kabatti ilanti birthdays chala jarupukovali nuvvu chala happy ga vundali<br>
+                    koncham ekkuva smiles tho 😌✨<br>
+                    Nee plans anni slow ga aina work avvali, and nuvvu anukunnavi achieve cheyyali 💫<br>
+                    hope ee birthday neeku peaceful ga, happy ga, and koncham special ga undali 🎂✨<br>
+                    Take care and enjoy your day 😄💛</p>
+
                     <div class="signature">— Teju 🌸</div>
                 </div>
             </div>
