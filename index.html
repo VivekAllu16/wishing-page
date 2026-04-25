@@ -167,14 +167,15 @@
             overflow-y: auto;
             overflow-x: hidden;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .card-container {
             position: relative;
-            max-width: 450px;
-            width: 90%;
+            max-width: 650px;
+            width: 85%;
             margin: 120px auto 180px auto;
             z-index: 2;
         }
@@ -200,7 +201,7 @@
 
         .girl-hang {
             left: calc(100% + 5px);
-            top: -30px;
+            top: auto;
             bottom: -15px;
         }
 
@@ -215,13 +216,13 @@
         }
 
         .unicorn-img {
-            width: 90px;
+            width: 130px;
             filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
             margin-top: -5px;
         }
 
         .girl-img {
-            width: 110px;
+            width: 160px;
             filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
             margin-top: -5px;
         }
@@ -232,10 +233,13 @@
             box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
 
-        .unicorn-hang .string,
-        .girl-hang .string {
+        .unicorn-hang .string {
             flex-grow: 1;
             height: auto;
+        }
+
+        .girl-hang .string {
+            display: none;
         }
 
         .star-left-hang .string,
@@ -265,7 +269,7 @@
             background: rgba(45, 20, 25, 0.75);
             padding: 35px 40px;
             border-radius: 20px;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(1px);
             border: 2px solid #ff7aa8;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
             outline: 2px dashed #ff7aa8;
@@ -325,8 +329,8 @@
 
         @media (max-width: 800px) {
             .card-container {
-                width: 70%;
-                max-width: 320px;
+                width: 75%;
+                max-width: 450px;
             }
 
             .card {
@@ -334,11 +338,11 @@
             }
 
             .unicorn-img {
-                width: 60px;
+                width: 80px;
             }
 
             .girl-img {
-                width: 75px;
+                width: 100px;
             }
 
             .star {
@@ -346,11 +350,19 @@
             }
 
             .star-left-hang {
-                left: 20%;
+                left: 15%;
             }
 
             .star-right-hang {
-                right: 20%;
+                right: 15%;
+            }
+
+            .message {
+                font-size: 0.95rem;
+            }
+
+            .message h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -401,19 +413,25 @@
             <div class="card">
                 <div class="message">
                     <h2>Happy Birthday Neha 💗</h2>
-                    <p>Ninnu first time chusinappudu attitude girl anukunna 😂, kani neetho travel chesina tarwathey ardam ayyindhi tingari danivi ani 🫩<br>
-                    Extrovert ka baap 🫡 neeku vunna friends list ki oka school pettachu 🤣</p>
-                    <p>Indirect ga mana friendship start ayna mana iddari madya chala funny moments jarigay🫂 neetho vunna parthi sari nuvvu nenu meena ni roast chestu stomach ache vachela navvevalam 😆</p>
+                    <p>Ninnu first time chusinappudu attitude girl anukunna 😂, kani neetho travel chesina tarwathey
+                        ardam ayyindhi tingari danivi ani 🫩<br>
+                        Extrovert ka baap 🫡 neeku vunna friends list ki oka school pettachu 🤣</p>
+                    <p>Indirect ga mana friendship start ayna mana iddari madya chala funny moments jarigay🫂 neetho
+                        vunna parthi sari nuvvu nenu meena ni roast chestu stomach ache vachela navvevalam 😆</p>
                     <p>Normal situation nee kuda funny ga marchali antey nee tarwathey evarina 🙂↔️</p>
-                    <p>Kalisi reels chesam, dance lu vesam, tirigam, tinnam, chala lifetime memories create cheskunnanu neetho 💗🫶</p>
-                    <p>Exam rayadaniki nuvvu, meena vellina prathi sari nannu eduru ramannadam made me feel special ✨😍</p>
+                    <p>Kalisi reels chesam, dance lu vesam, tirigam, tinnam, chala lifetime memories create cheskunnanu
+                        neetho 💗🫶</p>
+                    <p>Exam rayadaniki nuvvu, meena vellina prathi sari nannu eduru ramannadam made me feel special ✨😍
+                    </p>
                     <p>Neetho exhibition ki vellina prathi sari roju antha cheppukunela navvukunnam.💗<br>
-                    Normal ga start ayina friendship chala memorable ga ayyindhi so happy to have a person like you in my life ❤️</p>
-                    <p>Neeku birthdays🎈 antey chala istam kabatti ilanti birthdays chala jarupukovali nuvvu chala happy ga vundali<br>
-                    koncham ekkuva smiles tho 😌✨<br>
-                    Nee plans anni slow ga aina work avvali, and nuvvu anukunnavi achieve cheyyali 💫<br>
-                    hope ee birthday neeku peaceful ga, happy ga, and koncham special ga undali 🎂✨<br>
-                    Take care and enjoy your day 😄💛</p>
+                        Normal ga start ayina friendship chala memorable ga ayyindhi so happy to have a person like you
+                        in my life ❤️</p>
+                    <p>Neeku birthdays🎈 antey chala istam kabatti ilanti birthdays chala jarupukovali nuvvu chala happy
+                        ga vundali<br>
+                        koncham ekkuva smiles tho 😌✨<br>
+                        Nee plans anni slow ga aina work avvali, and nuvvu anukunnavi achieve cheyyali 💫<br>
+                        hope ee birthday neeku peaceful ga, happy ga, and koncham special ga undali 🎂✨<br>
+                        Take care and enjoy your day 😄💛</p>
 
                     <div class="signature">— Teju 🌸</div>
                 </div>
