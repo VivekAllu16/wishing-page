@@ -36,16 +36,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
         /* Title like reference */
         .open-title {
             font-family: "Cookie", cursive;
             font-size: 4rem;
-            margin-top: 120px;
+            margin-top: 0;
             color: #ffffff;
             text-shadow: 0px 5px 15px rgba(255, 90, 120, 0.35);
             animation: fadeIn 2s ease-out;
+            text-align: center;
         }
 
         /* Subtitle */
@@ -173,7 +175,7 @@
             position: relative;
             max-width: 450px;
             width: 90%;
-            margin: 170px auto 40px auto;
+            margin: 120px auto 180px auto;
             z-index: 2;
         }
 
@@ -183,13 +185,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .swing-anim {
             animation: swing 3s infinite ease-in-out alternate;
             transform-origin: top center;
         }
 
-        .unicorn-hang { left: 2%; top: -160px; animation-duration: 4s; }
-        .girl-hang { right: 2%; top: -170px; animation-duration: 4.5s; }
-        .star-left-hang { left: 35%; top: -90px; animation-delay: 0.5s; }
+        .unicorn-hang { right: calc(100% + 5px); top: -30px; bottom: 50%; }
+        .girl-hang { left: calc(100% + 5px); top: -30px; bottom: -15px; }
+        .star-left-hang { left: 35%; top: -90px; }
         .star-right-hang { right: 35%; top: -90px; }
 
         .unicorn-img {
@@ -210,8 +215,7 @@
             box-shadow: 0 0 5px rgba(255,215,0,0.5);
         }
 
-        .unicorn-hang .string { height: 90px; }
-        .girl-hang .string { height: 100px; }
+        .unicorn-hang .string, .girl-hang .string { flex-grow: 1; height: auto; }
         .star-left-hang .string, .star-right-hang .string { height: 60px; }
 
         .star {
@@ -282,14 +286,13 @@
         }
 
         @media (max-width: 800px) {
-            .card { padding: 25px; }
-            .unicorn-img { width: 80px; }
-            .girl-img { width: 100px; }
-            .star { font-size: 2.5rem; }
-            .unicorn-hang { left: 0%; top: -140px; }
-            .girl-hang { right: 0%; top: -150px; }
-            .unicorn-hang .string { height: 70px; }
-            .girl-hang .string { height: 80px; }
+            .card-container { width: 70%; max-width: 320px; }
+            .card { padding: 25px 20px; }
+            .unicorn-img { width: 60px; }
+            .girl-img { width: 75px; }
+            .star { font-size: 2rem; }
+            .star-left-hang { left: 20%; }
+            .star-right-hang { right: 20%; }
         }
     </style>
 </head>
@@ -314,7 +317,7 @@
 
         <div class="card-container">
             <!-- Left Unicorn (Hanging) -->
-            <div class="hanging-item unicorn-hang">
+            <div class="hanging-item swing-anim unicorn-hang" style="animation-duration: 4s;">
                 <div class="string"></div>
                 <img src="unicon.png" class="unicorn-img" alt="Unicorn" />
             </div>
@@ -326,11 +329,11 @@
             </div>
 
             <!-- Stars (Hanging) -->
-            <div class="hanging-item star-left-hang">
+            <div class="hanging-item swing-anim star-left-hang" style="animation-delay: 0.5s;">
                 <div class="string"></div>
                 <div class="star">⭐</div>
             </div>
-            <div class="hanging-item star-right-hang">
+            <div class="hanging-item swing-anim star-right-hang">
                 <div class="string"></div>
                 <div class="star">⭐</div>
             </div>
